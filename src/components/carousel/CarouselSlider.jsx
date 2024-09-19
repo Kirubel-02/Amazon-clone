@@ -1,9 +1,8 @@
 import React from "react";
 import { Carousel } from "react-responsive-carousel";
-import { img } from "./img/data";
+import { img } from "./carouselImgData";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import classes from "./carousel.module.css";
-
+import styles from "./carousel.module.css";
 function CarouselEffect() {
   return (
     <div>
@@ -13,12 +12,12 @@ function CarouselEffect() {
         showIndicators={false}
         showThumbs={false}
       >
-        {img.map((imageItemLink) => (
-          <img key={imageItemLink} src={imageItemLink} alt="image" />
-        ))}
+        {img.map((imageItemLink, index) => {
+          console.log(imageItemLink);
+          return <img key={index} src={imageItemLink} />;
+        })}
       </Carousel>
-
-      <div className={classes.hero__img}></div>
+      <div className={styles['hero__img--bottom']}></div>
     </div>
   );
 }

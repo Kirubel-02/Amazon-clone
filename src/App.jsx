@@ -1,15 +1,13 @@
-import { useState } from "react";
+import React, { useContext } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
-import Header from "./components/Header/Header";
-import CarouselEffect from "./components/Carousel/CarouselEffect";
-function App() {
-  const [count, setCount] = useState(0);
+import AppRouter from "./routes/AppRouter";
 
+function App() {
   return (
     <>
-      <Header />
-      <CarouselEffect />
-    </>
+    <AppRouter/>
+   </>
   );
 }
 
