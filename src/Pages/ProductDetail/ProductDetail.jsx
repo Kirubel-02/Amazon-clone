@@ -1,43 +1,38 @@
-import React, { useEffect, useState } from "react";
-import "./ProductDetail.module.css";
-import LayOut from "../../Components/LayOut/LayOut";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import { productUrl } from "../../Api/endPoints";
+import { productUrl } from "../../API/EndPoints";
 import ProductCard from "../../components/Product/ProductCard";
 import Loader from "../../components/Loader/Loder";
+import LayOut from "../../components/Layout/LayOut";
 
 function ProductDetail() {
   const { productId } = useParams();
   const [product, setProduct] = useState({});
   const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
-    setIsLoading(true);
-    axios
-      .get(`${productUrl}/products/${productId}`)
-      .then((res) => {
-        setProduct(res.data);
+    const fetchProduct = async () => {
+      setIsLoading(true);
+      try {
+        const response = await axios.get(`${productUrl}/products/${productId}`);
+        setProduct(response.data);
+      } catch (error) {
+        console.error(error);
+      } finally {
         setIsLoading(false);
-      })
-      .catch((err) => {
-        console.log(err);
-        setIsLoading(false);
-      });
+      }
+    };
+
+    fetchProduct();
   }, [productId]);
+
   return (
     <LayOut>
-      {isLoading ? (
-        <Loader />
-      ) : (
-        <ProductCard
-          product={product}
-          flex={true}
-          renderDesc={true}
-          renderAdd={true}
-        />
-      )}
+      {isLoading ? <Loader /> : <ProductCard product={product} flex renderDesc renderAdd />}
     </LayOut>
   );
 }
 
 export default ProductDetail;
+

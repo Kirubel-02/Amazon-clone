@@ -1,5 +1,5 @@
 import React from "react";
-import { RiseLoader} from "react-spinners";
+import { PulseLoader } from "react-spinners";
 function Loader() {
   return (
     <div
@@ -10,7 +10,8 @@ function Loader() {
         height: "50vh",
       }}
     >
-      <RiseLoader color="#36d7b7" />
+      <PulseLoader color="orange" />
+      
     </div>
   );
 }
