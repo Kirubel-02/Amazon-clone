@@ -6,7 +6,7 @@ import "firebase/compat/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyA-IQDPQrWwtapk60VSoSCuh7vEBWQrJgQ",
+  apiKey: "AIzaSyAzOi1GP5Dh7tydiTuVCNHpbQwliAu70PQ",
   authDomain: "clone-38286.firebaseapp.com",
   projectId: "clone-38286",
   storageBucket: "clone-38286.appspot.com",

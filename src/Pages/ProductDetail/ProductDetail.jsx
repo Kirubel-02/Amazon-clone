@@ -4,7 +4,7 @@ import axios from "axios";
 import { productUrl } from "../../API/EndPoints";
 import ProductCard from "../../components/Product/ProductCard";
 import Loader from "../../components/Loader/Loder";
-import LayOut from "../../components/Layout/LayOut";
+import LayOut from "../../components/Layout/Layout";
 
 function ProductDetail() {
   const { productId } = useParams();
@@ -29,10 +29,13 @@ function ProductDetail() {
 
   return (
     <LayOut>
-      {isLoading ? <Loader /> : <ProductCard product={product} flex renderDesc renderAdd />}
+      {isLoading ? (
+        <Loader />
+      ) : (
+        <ProductCard product={product} flex renderDesc renderAdd />
+      )}
     </LayOut>
   );
 }
 
 export default ProductDetail;
-

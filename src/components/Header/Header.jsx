@@ -6,9 +6,9 @@ import { FiShoppingCart } from "react-icons/fi";
 import { IoLocationOutline } from "react-icons/io5";
 import LowerHeader from "./LowerHeader";
 import { DataContext } from "../DataProvider/DataProvider";
-// import Auth from "../../Pages/Auth/Auth";
+import Auth from "../../Pages/Auth/Auth";
 
-// import { auth } from "../../Utility/firebase";
+import { auth } from "../../Utility/firebase";
 const Header = () => {
   const [{ user, basket }, dispatch] = useContext(DataContext);
   const totalItem = basket?.reduce((amount, item) => {
@@ -48,7 +48,7 @@ const Header = () => {
               <option value="">All</option>
             </select>
             <input type="text" placeholder="Search Amazon Products" />
-            <FaSearch size={40} />
+            <FaSearch size={42} />
           </div>
 
           {/* other section */}

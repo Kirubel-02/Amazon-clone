@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import Layout from "../../components/Layout/Layout";
 import { DataContext } from "../../components/DataProvider/DataProvider";
-// import { initialState, reducer } from "../../Utility/reducer.js";
+// import { initialState, reducer } from "../../Utility/reducer";
 import { Type } from "../../Utility/action.type";
 import CurrencyFormat from "../../components/CurrencyFormat/CurrencyFormat";
 
