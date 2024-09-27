@@ -1,5 +1,6 @@
 const { onRequest } = require("firebase-functions/v2/https");
 const logger = require("firebase-functions/logger");
+
 const express = require("express");
 const cors = require("cors");
 const dotenv = require("dotenv");
@@ -34,7 +35,7 @@ app.post("/payment/create", async (req, res) => {
     });
   } else {
     res.status(403).json({
-      message: "total must be greater than 0",
+      message: "total must be greater thn 0",
     });
   }
 });
