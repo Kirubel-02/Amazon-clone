@@ -61,6 +61,7 @@ function Payment() {
           .collection("orders")
           .doc(paymentIntent.id)
           .set({
+            basket: basket,
             amount: paymentIntent.amount,
             created: paymentIntent.created,
           });

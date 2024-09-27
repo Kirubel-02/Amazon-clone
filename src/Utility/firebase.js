@@ -1,3 +1,4 @@
+
 import firebase from "firebase/compat/app";
 // auth
 import { getAuth } from "firebase/auth";
@@ -7,11 +8,11 @@ import "firebase/compat/auth";
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyAzOi1GP5Dh7tydiTuVCNHpbQwliAu70PQ",
-  authDomain: "clone-38286.firebaseapp.com",
-  projectId: "clone-38286",
-  storageBucket: "clone-38286.appspot.com",
-  messagingSenderId: "947908360353",
-  appId: "1:947908360353:web:314e96ac93efd7ac72d8e0",
+  authDomain: "clone-bb050.firebaseapp.com",
+  projectId: "clone-bb050",
+  storageBucket: "clone-bb050.appspot.com",
+  messagingSenderId: "750395641348",
+  appId: "1:750395641348:web:2648090b781125923daf51",
 };
 
 // Initialize Firebase

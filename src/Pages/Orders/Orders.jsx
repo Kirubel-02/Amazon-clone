@@ -60,5 +60,4 @@ function Orders() {
     </LayOut>
   );
 }
-
 export default Orders;
