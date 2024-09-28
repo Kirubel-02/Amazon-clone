@@ -8,10 +8,10 @@ const axiosInstance = axios.create({
   baseURL: "https://amazon-api-hwai.onrender.com",
 
   // Optional timeout and headers can be adjusted based on requirements
-  timeout: 10000, // Timeout after 10 seconds
-  headers: {
-    "Content-Type": "application/json",
-  },
+  // timeout: 10000, // Timeout after 10 seconds
+  // headers: {
+  //   "Content-Type": "application/json",
+  // },
 });
 
 // Add interceptors to handle errors globally
